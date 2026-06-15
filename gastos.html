@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech — Gastos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-bg font-sans h-full">
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header items-center justify-between px-4 py-3 bg-sidebar sticky top-0 z-40">
+    <div class="flex items-center gap-2">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="10" cy="6" r="3" fill="#0D1117"/>
+        </svg>
+      </div>
+      <span class="font-serif text-lg text-white tracking-tight">Fintech</span>
+    </div>
+    <div class="avatar-gradient text-sm font-semibold">AB</div>
+  </header>
+
+  <div class="layout-wrapper flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar flex flex-col py-6 px-4 gap-6">
+      <div class="flex items-center gap-3 px-2">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="10" cy="6" r="3" fill="#0D1117"/>
+          </svg>
+        </div>
+        <span class="font-serif text-xl text-white tracking-tight">Fintech</span>
+      </div>
+
+      <nav class="flex flex-col gap-1 flex-1">
+        <span class="text-xs font-semibold text-gray-600 uppercase tracking-widest px-3 mb-1">Menu</span>
+        <a href="index.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>Painel</a>
+        <a href="receitas.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v10M3 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+        <a href="gastos.html" class="nav-item active"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 13V3M3 8l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+        <a href="historico.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h9M2 12h6" stroke-linecap="round"/></svg>Histórico</a>
+        <div class="h-px bg-white/10 my-2 mx-3"></div>
+        <a href="perfil.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="6" r="3"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5" stroke-linecap="round"/></svg>Perfil</a>
+        <a href="configuracoes.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke-linecap="round"/></svg>Configurações</a>
+      </nav>
+
+      <div class="flex items-center gap-3 border-t border-white/10 pt-4 px-2">
+        <div class="avatar-gradient">AB</div>
+        <div class="flex flex-col min-w-0">
+          <span class="text-white text-sm font-medium truncate">Ana Beatriz</span>
+          <span class="text-gray-500 text-xs truncate">Conta pessoal</span>
+        </div>
+        <svg class="ml-auto text-gray-600 flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="flex-1 flex flex-col min-w-0 scroll-area">
+
+      <header class="desktop-topbar flex items-center justify-between px-8 py-5 bg-bg border-b border-border sticky top-0 z-30">
+        <div class="flex flex-col gap-0.5">
+          <h1 class="font-serif text-2xl text-gray-900 leading-tight">Gastos</h1>
+          <p class="text-secondary text-sm">Saídas de abril · <span class="text-danger font-medium">atenção ao limite</span></p>
+        </div>
+        <div class="flex items-center gap-3">
+          <select class="month-select"><option>Abril 2024</option><option>Março 2024</option></select>
+          <a href="novo-registro.html" class="flex items-center gap-2 bg-sage text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-sage-light transition-colors">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 1v12M1 7h12" stroke-linecap="round"/></svg>
+            Novo registro
+          </a>
+        </div>
+      </header>
+
+      <div class="flex-1 px-4 lg:px-8 py-6 pb-24 lg:pb-8 flex flex-col gap-6">
+
+        <div class="lg:hidden flex items-center justify-between">
+          <div>
+            <h1 class="font-serif text-xl text-gray-900">Gastos</h1>
+            <p class="text-secondary text-xs mt-0.5">Saídas de abril · <span class="text-danger font-medium">atenção ao limite</span></p>
+          </div>
+          <select class="month-select text-xs"><option>Abril 2024</option></select>
+        </div>
+
+        <!-- Metric cards -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div class="fin-card flex flex-col gap-4" style="background:linear-gradient(135deg,#B03A2E,#C94E42);border-color:#B03A2E;">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-medium uppercase tracking-wide" style="color:rgba(255,255,255,.65)">Total de saídas</span>
+                <span class="font-serif text-3xl leading-none" style="color:#fff">R$&nbsp;4.240</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,.15)">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 4v10M4 9l5 5 5-5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full w-fit" style="background:rgba(255,255,255,.18);color:#fff">▲ 8% vs. março</span>
+          </div>
+
+          <div class="fin-card flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-secondary text-xs font-medium uppercase tracking-wide">Maior gasto</span>
+                <span class="font-serif text-3xl text-gray-900 leading-none">R$&nbsp;1.200</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-danger-pale flex items-center justify-center text-lg flex-shrink-0">🏠</div>
+            </div>
+            <span class="text-secondary text-xs">Aluguel · 05 abr</span>
+          </div>
+
+          <div class="fin-card flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-secondary text-xs font-medium uppercase tracking-wide">Lançamentos</span>
+                <span class="font-serif text-3xl text-gray-900 leading-none">12</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-danger-pale flex items-center justify-center flex-shrink-0">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4h14M2 9h14M2 14h8" stroke="#B03A2E" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </div>
+            </div>
+            <span class="text-secondary text-xs">saídas este mês</span>
+          </div>
+        </section>
+
+        <!-- Por categoria -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="fin-card">
+            <h2 class="text-gray-900 font-semibold text-sm mb-4">Por categoria</h2>
+            <div class="flex flex-col gap-3">
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1"><span class="text-secondary">Alimentação</span><span class="font-semibold text-gray-800">R$ 1.738 · 41%</span></div>
+                <div class="h-2 bg-sage-pale rounded-full"><div class="h-2 rounded-full" style="background:#3D6B5A;width:41%"></div></div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1"><span class="text-secondary">Transporte</span><span class="font-semibold text-gray-800">R$ 933 · 22%</span></div>
+                <div class="h-2 bg-sage-pale rounded-full"><div class="h-2 rounded-full" style="background:#5A9278;width:22%"></div></div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1"><span class="text-secondary">Lazer</span><span class="font-semibold text-gray-800">R$ 594 · 14%</span></div>
+                <div class="h-2 bg-gold-pale rounded-full"><div class="h-2 rounded-full" style="background:#C9A84C;width:14%"></div></div>
+              </div>
+              <div>
+                <div class="flex items-center justify-between text-xs mb-1"><span class="text-secondary">Moradia</span><span class="font-semibold text-gray-800">R$ 975 · 23%</span></div>
+                <div class="h-2 rounded-full" style="background:#E2EDE8"><div class="h-2 rounded-full" style="background:#B03A2E;width:23%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="fin-card">
+            <h2 class="text-gray-900 font-semibold text-sm mb-4">Últimos lançamentos</h2>
+            <ul class="divide-y divide-border">
+              <li class="flex items-center gap-3 py-3">
+                <div class="w-8 h-8 rounded-lg bg-danger-pale flex items-center justify-center text-sm flex-shrink-0">🍔</div>
+                <div class="flex-1 min-w-0"><p class="text-gray-900 text-xs font-medium truncate">iFood</p><p class="text-secondary text-xs">29 abr · Alimentação</p></div>
+                <span class="text-xs font-semibold" style="color:#B03A2E">– R$ 87,50</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <div class="w-8 h-8 rounded-lg bg-danger-pale flex items-center justify-center text-sm flex-shrink-0">🚗</div>
+                <div class="flex-1 min-w-0"><p class="text-gray-900 text-xs font-medium truncate">Uber</p><p class="text-secondary text-xs">28 abr · Transporte</p></div>
+                <span class="text-xs font-semibold" style="color:#B03A2E">– R$ 34,00</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <div class="w-8 h-8 rounded-lg bg-danger-pale flex items-center justify-center text-sm flex-shrink-0">🎬</div>
+                <div class="flex-1 min-w-0"><p class="text-gray-900 text-xs font-medium truncate">Cinema — Kinoplex</p><p class="text-secondary text-xs">26 abr · Lazer</p></div>
+                <span class="text-xs font-semibold" style="color:#B03A2E">– R$ 62,00</span>
+              </li>
+              <li class="flex items-center gap-3 py-3">
+                <div class="w-8 h-8 rounded-lg bg-danger-pale flex items-center justify-center text-sm flex-shrink-0">🏠</div>
+                <div class="flex-1 min-w-0"><p class="text-gray-900 text-xs font-medium truncate">Aluguel</p><p class="text-secondary text-xs">05 abr · Moradia</p></div>
+                <span class="text-xs font-semibold" style="color:#B03A2E">– R$ 1.200</span>
+              </li>
+            </ul>
+            <a href="historico.html" class="text-sage text-xs font-semibold hover:underline mt-3 inline-block">Ver todos →</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="2" width="7" height="7" rx="1.5"/><rect x="11" y="2" width="7" height="7" rx="1.5"/><rect x="2" y="11" width="7" height="7" rx="1.5"/><rect x="11" y="11" width="7" height="7" rx="1.5"/></svg>Painel</a>
+    <a href="receitas.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 9l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+    <a href="novo-registro.html" class="bottom-nav-plus"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2.4"><path d="M11 4v14M4 11h14" stroke-linecap="round"/></svg></a>
+    <a href="gastos.html" class="bottom-nav-btn active"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 11l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+    <a href="perfil.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.5"/><path d="M3 18c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke-linecap="round"/></svg>Perfil</a>
+  </nav>
+
+</body>
+</html>

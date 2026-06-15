@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech — Painel Financeiro</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-bg font-sans h-full">
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE HEADER (hidden on desktop via CSS)
+  ════════════════════════════════════════════════════════ -->
+  <header class="mobile-header items-center justify-between px-4 py-3 bg-sidebar sticky top-0 z-40">
+    <div class="flex items-center gap-2">
+      <div class="brand-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="10" cy="6" r="3" fill="#0D1117"/>
+        </svg>
+      </div>
+      <span class="font-serif text-lg text-white tracking-tight">Fintech</span>
+    </div>
+    <div class="avatar-gradient text-sm font-semibold">AB</div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════
+       LAYOUT WRAPPER
+  ════════════════════════════════════════════════════════ -->
+  <div class="layout-wrapper flex min-h-screen">
+
+    <!-- ──────────────────────────────────────────────────
+         SIDEBAR (desktop only)
+    ─────────────────────────────────────────────────── -->
+    <aside class="sidebar flex flex-col py-6 px-4 gap-6">
+
+      <!-- Brand -->
+      <div class="flex items-center gap-3 px-2">
+        <div class="brand-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="10" cy="6" r="3" fill="#0D1117"/>
+          </svg>
+        </div>
+        <span class="font-serif text-xl text-white tracking-tight">Fintech</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex flex-col gap-1 flex-1">
+        <span class="text-xs font-semibold text-gray-600 uppercase tracking-widest px-3 mb-1">Menu</span>
+
+        <a href="index.html" class="nav-item active">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <rect x="1" y="1" width="6" height="6" rx="1.5"/>
+            <rect x="9" y="1" width="6" height="6" rx="1.5"/>
+            <rect x="1" y="9" width="6" height="6" rx="1.5"/>
+            <rect x="9" y="9" width="6" height="6" rx="1.5"/>
+          </svg>
+          Painel
+        </a>
+
+        <a href="receitas.html" class="nav-item">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 3v10M3 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Receitas
+        </a>
+
+        <a href="gastos.html" class="nav-item">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M8 13V3M3 8l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Gastos
+        </a>
+
+        <a href="historico.html" class="nav-item">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 4h12M2 8h9M2 12h6" stroke-linecap="round"/>
+          </svg>
+          Histórico
+        </a>
+
+        <div class="h-px bg-white/10 my-2 mx-3"></div>
+
+        <a href="perfil.html" class="nav-item">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="8" cy="6" r="3"/>
+            <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5" stroke-linecap="round"/>
+          </svg>
+          Perfil
+        </a>
+
+        <a href="configuracoes.html" class="nav-item">
+          <span class="nav-dot"></span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="8" cy="8" r="2.5"/>
+            <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke-linecap="round"/>
+          </svg>
+          Configurações
+        </a>
+      </nav>
+
+      <!-- User footer -->
+      <div class="flex items-center gap-3 border-t border-white/10 pt-4 px-2">
+        <div class="avatar-gradient">AB</div>
+        <div class="flex flex-col min-w-0">
+          <span class="text-white text-sm font-medium truncate">Ana Beatriz</span>
+          <span class="text-gray-500 text-xs truncate">Conta pessoal</span>
+        </div>
+        <svg class="ml-auto text-gray-600 flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M5 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
+    </aside>
+    <!-- /sidebar -->
+
+    <!-- ──────────────────────────────────────────────────
+         MAIN CONTENT
+    ─────────────────────────────────────────────────── -->
+    <main class="flex-1 flex flex-col min-w-0 scroll-area">
+
+      <!-- ── Desktop Topbar ─────────────────────────── -->
+      <header class="desktop-topbar flex items-center justify-between px-8 py-5 bg-bg border-b border-border sticky top-0 z-30">
+        <div class="flex flex-col gap-0.5">
+          <h1 class="font-serif text-2xl text-gray-900 leading-tight">Painel Financeiro</h1>
+          <p class="text-secondary text-sm">Resumo de abril · <span class="text-sage font-medium">atualizado agora</span></p>
+        </div>
+        <div class="flex items-center gap-3">
+          <select class="month-select">
+            <option>Abril 2024</option>
+            <option>Março 2024</option>
+            <option>Fevereiro 2024</option>
+            <option>Janeiro 2024</option>
+          </select>
+          <a href="novo-registro.html" class="flex items-center gap-2 bg-sage text-white text-sm font-semibold px-4 py-2 rounded-xl hover:bg-sage-light transition-colors">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M7 1v12M1 7h12" stroke-linecap="round"/>
+            </svg>
+            Novo registro
+          </a>
+        </div>
+      </header>
+
+      <!-- ── Page body ───────────────────────────────── -->
+      <div class="flex-1 px-4 lg:px-8 py-6 pb-24 lg:pb-8 flex flex-col gap-6">
+
+        <!-- ── Mobile topbar title (below header) ──── -->
+        <div class="lg:hidden flex items-center justify-between">
+          <div>
+            <h1 class="font-serif text-xl text-gray-900">Painel Financeiro</h1>
+            <p class="text-secondary text-xs mt-0.5">Resumo de abril · <span class="text-sage font-medium">atualizado agora</span></p>
+          </div>
+          <div class="flex items-center gap-2">
+            <select class="month-select text-xs">
+              <option>Abril 2024</option>
+              <option>Março 2024</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             METRIC CARDS
+        ═══════════════════════════════════════════ -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+          <!-- Receitas -->
+          <div class="fin-card flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-secondary text-xs font-medium uppercase tracking-wide">Receitas do mês</span>
+                <span class="font-serif text-3xl text-gray-900 leading-none">R$&nbsp;6.800</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-sage-pale flex items-center justify-center flex-shrink-0">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 14V4M4 9l5-5 5 5" stroke="#3D6B5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 bg-sage-pale text-sage text-xs font-semibold px-2.5 py-1 rounded-full">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M5 1l1.2 3.8H10L7 6.9l1.2 3.8L5 8.6l-3.2 2.1L3 6.9.2 4.8H4z"/></svg>
+                ▲ 12%
+              </span>
+              <span class="text-secondary text-xs">vs. março</span>
+            </div>
+          </div>
+
+          <!-- Gastos -->
+          <div class="fin-card flex flex-col gap-4">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-secondary text-xs font-medium uppercase tracking-wide">Gastos do mês</span>
+                <span class="font-serif text-3xl text-gray-900 leading-none">R$&nbsp;4.240</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl bg-danger-pale flex items-center justify-center flex-shrink-0">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path d="M9 4v10M4 9l5 5 5-5" stroke="#B03A2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 bg-danger-pale text-danger text-xs font-semibold px-2.5 py-1 rounded-full">
+                ▲ 8%
+              </span>
+              <span class="text-secondary text-xs">vs. março</span>
+            </div>
+          </div>
+
+          <!-- Saldo -->
+          <div class="fin-card flex flex-col gap-4" style="background: linear-gradient(135deg, #3D6B5A 0%, #4E8570 100%); border-color: #3D6B5A;">
+            <div class="flex items-start justify-between">
+              <div class="flex flex-col gap-1">
+                <span class="text-xs font-medium uppercase tracking-wide" style="color: rgba(255,255,255,0.65);">Saldo atual</span>
+                <span class="font-serif text-3xl leading-none" style="color: #fff;">R$&nbsp;2.560</span>
+              </div>
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(255,255,255,0.15);">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <rect x="2" y="5" width="14" height="10" rx="2" stroke="white" stroke-width="1.8"/>
+                  <path d="M2 9h14" stroke="white" stroke-width="1.8"/>
+                  <circle cx="13.5" cy="12" r="1" fill="white"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full" style="background: rgba(255,255,255,0.18); color: #fff;">
+                ✓ Saldo positivo
+              </span>
+            </div>
+          </div>
+
+        </section>
+        <!-- /metric cards -->
+
+        <!-- ══════════════════════════════════════════
+             CHARTS ROW
+        ═══════════════════════════════════════════ -->
+        <section class="grid grid-cols-1 lg:grid-cols-5 gap-4">
+
+          <!-- Bar chart — Receitas × Gastos -->
+          <div class="fin-card lg:col-span-3 flex flex-col gap-5">
+            <div class="flex items-center justify-between">
+              <div>
+                <h2 class="text-gray-900 font-semibold text-sm">Receitas × Gastos</h2>
+                <p class="text-secondary text-xs mt-0.5">Últimos 6 meses</p>
+              </div>
+              <div class="flex items-center gap-4 text-xs text-secondary">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-sm inline-block" style="background:#3D6B5A;"></span>Receitas
+                </span>
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-sm inline-block" style="background:rgba(176,58,46,0.55);"></span>Gastos
+                </span>
+              </div>
+            </div>
+
+            <!-- Bars -->
+            <div class="bar-chart-wrap px-2 gap-3">
+              <!-- Nov -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-62 w-5"></div>
+                  <div class="bar-gas bar-h-50 w-5"></div>
+                </div>
+              </div>
+              <!-- Dez -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-70 w-5"></div>
+                  <div class="bar-gas bar-h-55 w-5"></div>
+                </div>
+              </div>
+              <!-- Jan -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-65 w-5"></div>
+                  <div class="bar-gas bar-h-48 w-5"></div>
+                </div>
+              </div>
+              <!-- Fev -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-78 w-5"></div>
+                  <div class="bar-gas bar-h-58 w-5"></div>
+                </div>
+              </div>
+              <!-- Mar -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-82 w-5"></div>
+                  <div class="bar-gas bar-h-62 w-5"></div>
+                </div>
+              </div>
+              <!-- Abr -->
+              <div class="flex flex-col items-center gap-1 flex-1">
+                <div class="flex items-end gap-1 h-full">
+                  <div class="bar-rec bar-h-90 w-5"></div>
+                  <div class="bar-gas bar-h-65 w-5"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- X-axis labels -->
+            <div class="flex px-2 gap-3">
+              <div class="flex-1 text-center text-xs text-secondary">Nov</div>
+              <div class="flex-1 text-center text-xs text-secondary">Dez</div>
+              <div class="flex-1 text-center text-xs text-secondary">Jan</div>
+              <div class="flex-1 text-center text-xs text-secondary">Fev</div>
+              <div class="flex-1 text-center text-xs text-secondary">Mar</div>
+              <div class="flex-1 text-center text-xs font-semibold text-sage">Abr</div>
+            </div>
+          </div>
+
+          <!-- Donut chart — Gastos por categoria -->
+          <div class="fin-card lg:col-span-2 flex flex-col gap-5">
+            <div>
+              <h2 class="text-gray-900 font-semibold text-sm">Gastos por categoria</h2>
+              <p class="text-secondary text-xs mt-0.5">Abril 2024</p>
+            </div>
+
+            <div class="flex items-center gap-5">
+              <!-- SVG donut -->
+              <div class="donut-wrap">
+                <svg width="130" height="130" viewBox="0 0 130 130" style="transform:rotate(-90deg)">
+                  <!-- track -->
+                  <circle cx="65" cy="65" r="50" fill="none" stroke="#E2EDE8" stroke-width="18"/>
+                  <!-- Alimentação 41% → 257.6 / 628.3 = 41% — dasharray: 41% of circumference (314.16) = 128.8 -->
+                  <circle cx="65" cy="65" r="50" fill="none" stroke="#3D6B5A" stroke-width="18"
+                    stroke-dasharray="128.8 314.16" stroke-dashoffset="0" stroke-linecap="butt"/>
+                  <!-- Transporte 22% → offset=128.8, length=69.1 -->
+                  <circle cx="65" cy="65" r="50" fill="none" stroke="#5A9278" stroke-width="18"
+                    stroke-dasharray="69.1 314.16" stroke-dashoffset="-128.8" stroke-linecap="butt"/>
+                  <!-- Lazer 14% → offset=197.9, length=44.0 -->
+                  <circle cx="65" cy="65" r="50" fill="none" stroke="#C9A84C" stroke-width="18"
+                    stroke-dasharray="44.0 314.16" stroke-dashoffset="-197.9" stroke-linecap="butt"/>
+                  <!-- Outros 23% → offset=241.9, length=72.3 -->
+                  <circle cx="65" cy="65" r="50" fill="none" stroke="#E0DBD1" stroke-width="18"
+                    stroke-dasharray="72.3 314.16" stroke-dashoffset="-241.9" stroke-linecap="butt"/>
+                </svg>
+                <div class="donut-center">
+                  <span class="font-serif text-lg text-gray-900 leading-none">41%</span>
+                  <span class="text-secondary text-xs mt-0.5">maior</span>
+                </div>
+              </div>
+
+              <!-- Legend -->
+              <div class="flex flex-col gap-2.5 text-xs flex-1">
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#3D6B5A;"></span>
+                  <span class="text-secondary flex-1">Alimentação</span>
+                  <span class="font-semibold text-gray-800">41%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#5A9278;"></span>
+                  <span class="text-secondary flex-1">Transporte</span>
+                  <span class="font-semibold text-gray-800">22%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#C9A84C;"></span>
+                  <span class="text-secondary flex-1">Lazer</span>
+                  <span class="font-semibold text-gray-800">14%</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="w-2.5 h-2.5 rounded-full flex-shrink-0" style="background:#E0DBD1;"></span>
+                  <span class="text-secondary flex-1">Outros</span>
+                  <span class="font-semibold text-gray-800">23%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+        <!-- /charts -->
+
+        <!-- ══════════════════════════════════════════
+             RECENT TRANSACTIONS
+        ═══════════════════════════════════════════ -->
+        <section class="fin-card flex flex-col gap-0">
+          <div class="flex items-center justify-between pb-4 border-b border-border">
+            <div>
+              <h2 class="text-gray-900 font-semibold text-sm">Lançamentos recentes</h2>
+              <p class="text-secondary text-xs mt-0.5">Últimas 5 movimentações</p>
+            </div>
+            <a href="historico.html" class="text-sage text-xs font-semibold hover:underline">Ver todos →</a>
+          </div>
+
+          <ul class="divide-y divide-border">
+
+            <!-- Tx 1 — Salário -->
+            <li class="flex items-center gap-4 py-4">
+              <div class="w-10 h-10 rounded-xl bg-sage-pale flex items-center justify-center text-lg flex-shrink-0">💼</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-gray-900 text-sm font-medium truncate">Salário</p>
+                <p class="text-secondary text-xs mt-0.5">30 abr · Receita · <span class="text-sage-light">Trabalho</span></p>
+              </div>
+              <span class="font-serif text-base font-semibold" style="color:#3D6B5A;">+ R$ 5.200</span>
+            </li>
+
+            <!-- Tx 2 — iFood -->
+            <li class="flex items-center gap-4 py-4">
+              <div class="w-10 h-10 rounded-xl bg-danger-pale flex items-center justify-center text-lg flex-shrink-0">🍔</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-gray-900 text-sm font-medium truncate">iFood</p>
+                <p class="text-secondary text-xs mt-0.5">29 abr · Gasto · <span class="text-danger">Alimentação</span></p>
+              </div>
+              <span class="font-serif text-base font-semibold" style="color:#B03A2E;">– R$ 87,50</span>
+            </li>
+
+            <!-- Tx 3 — Uber -->
+            <li class="flex items-center gap-4 py-4">
+              <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0" style="background:#FBF5E6;">🚗</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-gray-900 text-sm font-medium truncate">Uber</p>
+                <p class="text-secondary text-xs mt-0.5">28 abr · Gasto · <span class="text-danger">Transporte</span></p>
+              </div>
+              <span class="font-serif text-base font-semibold" style="color:#B03A2E;">– R$ 34,00</span>
+            </li>
+
+            <!-- Tx 4 — Freelance -->
+            <li class="flex items-center gap-4 py-4">
+              <div class="w-10 h-10 rounded-xl bg-sage-pale flex items-center justify-center text-lg flex-shrink-0">💻</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-gray-900 text-sm font-medium truncate">Freelance — Design UI</p>
+                <p class="text-secondary text-xs mt-0.5">27 abr · Receita · <span class="text-sage-light">Trabalho</span></p>
+              </div>
+              <span class="font-serif text-base font-semibold" style="color:#3D6B5A;">+ R$ 1.600</span>
+            </li>
+
+            <!-- Tx 5 — Cinema -->
+            <li class="flex items-center gap-4 py-4">
+              <div class="w-10 h-10 rounded-xl bg-danger-pale flex items-center justify-center text-lg flex-shrink-0">🎬</div>
+              <div class="flex-1 min-w-0">
+                <p class="text-gray-900 text-sm font-medium truncate">Cinema — Kinoplex</p>
+                <p class="text-secondary text-xs mt-0.5">26 abr · Gasto · <span class="text-danger">Lazer</span></p>
+              </div>
+              <span class="font-serif text-base font-semibold" style="color:#B03A2E;">– R$ 62,00</span>
+            </li>
+
+          </ul>
+        </section>
+        <!-- /transactions -->
+
+      </div>
+      <!-- /page body -->
+
+    </main>
+    <!-- /main -->
+
+  </div>
+  <!-- /layout wrapper -->
+
+  <!-- ═══════════════════════════════════════════════════════
+       MOBILE BOTTOM NAV
+  ════════════════════════════════════════════════════════ -->
+  <nav class="bottom-nav">
+
+    <!-- Painel -->
+    <a href="index.html" class="bottom-nav-btn active">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+        <rect x="2" y="2" width="7" height="7" rx="1.5"/>
+        <rect x="11" y="2" width="7" height="7" rx="1.5"/>
+        <rect x="2" y="11" width="7" height="7" rx="1.5"/>
+        <rect x="11" y="11" width="7" height="7" rx="1.5"/>
+      </svg>
+      Painel
+    </a>
+
+    <!-- Receitas -->
+    <a href="receitas.html" class="bottom-nav-btn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M10 4v12M5 9l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Receitas
+    </a>
+
+    <!-- Plus central -->
+    <a href="novo-registro.html" class="bottom-nav-plus">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2.4">
+        <path d="M11 4v14M4 11h14" stroke-linecap="round"/>
+      </svg>
+    </a>
+
+    <!-- Gastos -->
+    <a href="gastos.html" class="bottom-nav-btn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+        <path d="M10 4v12M5 11l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Gastos
+    </a>
+
+    <!-- Perfil -->
+    <a href="perfil.html" class="bottom-nav-btn">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="10" cy="7" r="3.5"/>
+        <path d="M3 18c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke-linecap="round"/>
+      </svg>
+      Perfil
+    </a>
+
+  </nav>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech — Novo Registro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-bg font-sans h-full">
+
+  <header class="mobile-header items-center justify-between px-4 py-3 bg-sidebar sticky top-0 z-40">
+    <div class="flex items-center gap-2">
+      <div class="brand-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="6" r="3" fill="#0D1117"/></svg></div>
+      <span class="font-serif text-lg text-white tracking-tight">Fintech</span>
+    </div>
+    <div class="avatar-gradient text-sm font-semibold">AB</div>
+  </header>
+
+  <div class="layout-wrapper flex min-h-screen">
+    <aside class="sidebar flex flex-col py-6 px-4 gap-6">
+      <div class="flex items-center gap-3 px-2">
+        <div class="brand-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="6" r="3" fill="#0D1117"/></svg></div>
+        <span class="font-serif text-xl text-white tracking-tight">Fintech</span>
+      </div>
+      <nav class="flex flex-col gap-1 flex-1">
+        <span class="text-xs font-semibold text-gray-600 uppercase tracking-widest px-3 mb-1">Menu</span>
+        <a href="index.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>Painel</a>
+        <a href="receitas.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v10M3 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+        <a href="gastos.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 13V3M3 8l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+        <a href="historico.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h9M2 12h6" stroke-linecap="round"/></svg>Histórico</a>
+        <div class="h-px bg-white/10 my-2 mx-3"></div>
+        <a href="perfil.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="6" r="3"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5" stroke-linecap="round"/></svg>Perfil</a>
+        <a href="configuracoes.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke-linecap="round"/></svg>Configurações</a>
+      </nav>
+      <div class="flex items-center gap-3 border-t border-white/10 pt-4 px-2">
+        <div class="avatar-gradient">AB</div>
+        <div class="flex flex-col min-w-0"><span class="text-white text-sm font-medium truncate">Ana Beatriz</span><span class="text-gray-500 text-xs truncate">Conta pessoal</span></div>
+        <svg class="ml-auto text-gray-600 flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col min-w-0 scroll-area">
+      <header class="desktop-topbar flex items-center justify-between px-8 py-5 bg-bg border-b border-border sticky top-0 z-30">
+        <div class="flex items-center gap-3">
+          <a href="index.html" class="text-secondary hover:text-sage transition-colors">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 4l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div>
+            <h1 class="font-serif text-2xl text-gray-900 leading-tight">Novo Registro</h1>
+            <p class="text-secondary text-sm">Adicionar lançamento</p>
+          </div>
+        </div>
+      </header>
+
+      <div class="flex-1 px-4 lg:px-8 py-6 pb-24 lg:pb-8 flex flex-col gap-6 max-w-2xl w-full mx-auto lg:mx-0">
+
+        <div class="lg:hidden flex items-center gap-3 mb-2">
+          <a href="index.html" class="text-secondary hover:text-sage transition-colors">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 4l-6 6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <h1 class="font-serif text-xl text-gray-900">Novo Registro</h1>
+        </div>
+
+        <!-- Type toggle -->
+        <div class="fin-card flex gap-2 p-2">
+          <span class="flex-1 text-center py-2.5 rounded-xl text-sm font-semibold cursor-pointer transition-colors" style="background:#3D6B5A;color:#fff">
+            ↑ Receita
+          </span>
+          <span class="flex-1 text-center py-2.5 rounded-xl text-sm font-medium cursor-pointer text-secondary hover:bg-danger-pale hover:text-danger transition-colors">
+            ↓ Gasto
+          </span>
+        </div>
+
+        <!-- Form -->
+        <form class="fin-card flex flex-col gap-5">
+          <div class="flex flex-col gap-1.5">
+            <label class="text-secondary text-xs font-medium">Descrição</label>
+            <input type="text" placeholder="Ex: Salário, iFood, Aluguel..." class="bg-bg border border-border rounded-xl px-4 py-3 text-sm text-gray-900 outline-none focus:border-sage transition-colors w-full" />
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-secondary text-xs font-medium">Valor (R$)</label>
+            <input type="text" placeholder="0,00" class="bg-bg border border-border rounded-xl px-4 py-3 text-sm text-gray-900 font-serif text-lg outline-none focus:border-sage transition-colors w-full" />
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-1.5">
+              <label class="text-secondary text-xs font-medium">Categoria</label>
+              <select class="month-select w-full">
+                <option>Trabalho</option>
+                <option>Alimentação</option>
+                <option>Transporte</option>
+                <option>Moradia</option>
+                <option>Lazer</option>
+                <option>Saúde</option>
+                <option>Investimentos</option>
+                <option>Outros</option>
+              </select>
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label class="text-secondary text-xs font-medium">Data</label>
+              <input type="date" class="bg-bg border border-border rounded-xl px-4 py-3 text-sm text-gray-900 outline-none focus:border-sage transition-colors w-full" value="2024-04-30" />
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-secondary text-xs font-medium">Tipo</label>
+            <select class="month-select w-full">
+              <option>Avulso</option>
+              <option>Recorrente</option>
+              <option>Parcelado</option>
+            </select>
+          </div>
+
+          <div class="flex flex-col gap-1.5">
+            <label class="text-secondary text-xs font-medium">Observação <span class="text-secondary/60">(opcional)</span></label>
+            <textarea placeholder="Alguma nota sobre este lançamento..." rows="3" class="bg-bg border border-border rounded-xl px-4 py-3 text-sm text-gray-900 outline-none focus:border-sage transition-colors resize-none w-full"></textarea>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <a href="index.html" class="flex-1 text-center py-3 border border-border rounded-xl text-sm font-medium text-secondary hover:border-sage hover:text-sage transition-colors">Cancelar</a>
+            <a href="index.html" class="flex-1 text-center py-3 bg-sage text-white rounded-xl text-sm font-semibold hover:bg-sage-light transition-colors">Salvar registro</a>
+          </div>
+        </form>
+
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="2" width="7" height="7" rx="1.5"/><rect x="11" y="2" width="7" height="7" rx="1.5"/><rect x="2" y="11" width="7" height="7" rx="1.5"/><rect x="11" y="11" width="7" height="7" rx="1.5"/></svg>Painel</a>
+    <a href="receitas.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 9l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+    <a href="novo-registro.html" class="bottom-nav-plus" style="background:linear-gradient(135deg,#3D6B5A,#5A9278);box-shadow:0 4px 14px rgba(61,107,90,0.7)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2.4"><path d="M11 4v14M4 11h14" stroke-linecap="round"/></svg></a>
+    <a href="gastos.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 11l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+    <a href="perfil.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.5"/><path d="M3 18c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke-linecap="round"/></svg>Perfil</a>
+  </nav>
+</body>
+</html>
