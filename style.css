@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+/* ── Base ───────────────────────────────────────────────── */
+html { height: 100%; }
+
+body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: #F0EDE6;
+  min-height: 100%;
+}
+
+/* ── Sidebar ────────────────────────────────────────────── */
+.sidebar {
+  position: relative;
+  background-color: #0D1117;
+  overflow: hidden;
+  width: 240px;
+  min-height: 100vh;
+  flex-shrink: 0;
+}
+
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(61,107,90,0.35) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sidebar::after {
+  content: '';
+  position: absolute;
+  bottom: 60px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sidebar > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Brand icon ─────────────────────────────────────────── */
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #C9A84C 0%, #E8C86A 100%);
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(201,168,76,0.4);
+}
+
+/* ── Avatar gradient ─────────────────────────────────────── */
+.avatar-gradient {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3D6B5A 0%, #5A9278 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+/* ── Financial cards ─────────────────────────────────────── */
+.fin-card {
+  background: #FAFAF7;
+  border: 1px solid #E0DBD1;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.fin-card:hover {
+  box-shadow: 0 8px 24px rgba(13,17,23,0.08);
+  transform: translateY(-2px);
+}
+
+/* ── Bar chart ──────────────────────────────────────────── */
+.bar-chart-wrap {
+  height: 110px;
+  border-bottom: 1.5px solid #E0DBD1;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.bar-rec  { background: #3D6B5A; border-radius: 4px 4px 0 0; }
+.bar-gas  { background: rgba(176,58,46,0.45); border-radius: 4px 4px 0 0; }
+
+/* bar heights desktop */
+.bar-h-90  { height: 90px; }
+.bar-h-82  { height: 82px; }
+.bar-h-78  { height: 78px; }
+.bar-h-70  { height: 70px; }
+.bar-h-65  { height: 65px; }
+.bar-h-62  { height: 62px; }
+.bar-h-58  { height: 58px; }
+.bar-h-55  { height: 55px; }
+.bar-h-50  { height: 50px; }
+.bar-h-48  { height: 48px; }
+.bar-h-42  { height: 42px; }
+.bar-h-38  { height: 38px; }
+
+/* ── Scroll area ─────────────────────────────────────────── */
+.scroll-area {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #E0DBD1 transparent;
+}
+
+.scroll-area::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-area::-webkit-scrollbar-thumb {
+  background-color: #E0DBD1;
+  border-radius: 4px;
+}
+
+/* ── Nav item ────────────────────────────────────────────── */
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #9CA3AF;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.07);
+  color: #F9FAFB;
+}
+
+.nav-item.active {
+  background: rgba(61,107,90,0.28);
+  color: #6EC99E;
+}
+
+.nav-item.active .nav-dot {
+  background: #5A9278;
+  box-shadow: 0 0 6px rgba(90,146,120,0.6);
+}
+
+.nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+}
+
+/* ── Bottom nav (mobile) ─────────────────────────────────── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: #0D1117;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.bottom-nav-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  color: #6B7280;
+  font-size: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 4px 10px;
+}
+
+.bottom-nav-btn.active {
+  color: #5A9278;
+}
+
+.bottom-nav-plus {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3D6B5A, #5A9278);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  margin-top: -20px;
+  box-shadow: 0 4px 14px rgba(61,107,90,0.5);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Donut chart ─────────────────────────────────────────── */
+.donut-wrap {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  flex-shrink: 0;
+}
+
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ── Month selector ──────────────────────────────────────── */
+.month-select {
+  appearance: none;
+  background: #FAFAF7;
+  border: 1px solid #E0DBD1;
+  border-radius: 8px;
+  padding: 7px 32px 7px 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236B7280' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* ── Desktop: fixed sidebar layout, main scrolls inside ──── */
+@media (min-width: 1024px) {
+  html, body           { height: 100%; overflow: hidden; }
+  .layout-wrapper      { height: 100vh; }
+  .scroll-area         { height: 100vh; overflow-y: auto; }
+  .mobile-header       { display: none !important; }
+  .bottom-nav          { display: none !important; }
+}
+
+/* ── Mobile / tablet: natural page scroll ────────────────── */
+@media (max-width: 1023px) {
+  html, body           { height: auto !important; overflow: visible !important; }
+  .layout-wrapper      { height: auto !important; min-height: auto !important; }
+  .sidebar             { display: none !important; }
+  .desktop-topbar      { display: none !important; }
+  .mobile-header       { display: flex !important; }
+  .bottom-nav          { display: flex !important; }
+  main.scroll-area     { height: auto !important; overflow-y: visible !important; }
+
+  .bar-h-90  { height: 72px; }
+  .bar-h-82  { height: 66px; }
+  .bar-h-78  { height: 62px; }
+  .bar-h-70  { height: 56px; }
+  .bar-h-65  { height: 52px; }
+  .bar-h-62  { height: 50px; }
+  .bar-h-58  { height: 46px; }
+  .bar-h-55  { height: 44px; }
+  .bar-h-50  { height: 40px; }
+  .bar-h-48  { height: 38px; }
+  .bar-h-42  { height: 34px; }
+  .bar-h-38  { height: 30px; }
+  .bar-chart-wrap { height: 90px; }
+}

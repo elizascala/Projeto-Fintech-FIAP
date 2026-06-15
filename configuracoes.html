@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fintech — Configurações</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="tailwind.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-bg font-sans h-full">
+
+  <header class="mobile-header items-center justify-between px-4 py-3 bg-sidebar sticky top-0 z-40">
+    <div class="flex items-center gap-2">
+      <div class="brand-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="6" r="3" fill="#0D1117"/></svg></div>
+      <span class="font-serif text-lg text-white tracking-tight">Fintech</span>
+    </div>
+    <div class="avatar-gradient text-sm font-semibold">AB</div>
+  </header>
+
+  <div class="layout-wrapper flex min-h-screen">
+    <aside class="sidebar flex flex-col py-6 px-4 gap-6">
+      <div class="flex items-center gap-3 px-2">
+        <div class="brand-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14C4 11.8 5.5 10 8 10s5 2 7 2" stroke="#0D1117" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="6" r="3" fill="#0D1117"/></svg></div>
+        <span class="font-serif text-xl text-white tracking-tight">Fintech</span>
+      </div>
+      <nav class="flex flex-col gap-1 flex-1">
+        <span class="text-xs font-semibold text-gray-600 uppercase tracking-widest px-3 mb-1">Menu</span>
+        <a href="index.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>Painel</a>
+        <a href="receitas.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v10M3 8l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+        <a href="gastos.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 13V3M3 8l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+        <a href="historico.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 4h12M2 8h9M2 12h6" stroke-linecap="round"/></svg>Histórico</a>
+        <div class="h-px bg-white/10 my-2 mx-3"></div>
+        <a href="perfil.html" class="nav-item"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="6" r="3"/><path d="M2 14c0-3 2.7-5 6-5s6 2 6 5" stroke-linecap="round"/></svg>Perfil</a>
+        <a href="configuracoes.html" class="nav-item active"><span class="nav-dot"></span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="2.5"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" stroke-linecap="round"/></svg>Configurações</a>
+      </nav>
+      <div class="flex items-center gap-3 border-t border-white/10 pt-4 px-2">
+        <div class="avatar-gradient">AB</div>
+        <div class="flex flex-col min-w-0"><span class="text-white text-sm font-medium truncate">Ana Beatriz</span><span class="text-gray-500 text-xs truncate">Conta pessoal</span></div>
+        <svg class="ml-auto text-gray-600 flex-shrink-0" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+    </aside>
+
+    <main class="flex-1 flex flex-col min-w-0 scroll-area">
+      <header class="desktop-topbar flex items-center justify-between px-8 py-5 bg-bg border-b border-border sticky top-0 z-30">
+        <div><h1 class="font-serif text-2xl text-gray-900">Configurações</h1><p class="text-secondary text-sm">Preferências do sistema</p></div>
+      </header>
+
+      <div class="flex-1 px-4 lg:px-8 py-6 pb-24 lg:pb-8 flex flex-col gap-6 max-w-2xl">
+
+        <div class="lg:hidden"><h1 class="font-serif text-xl text-gray-900">Configurações</h1><p class="text-secondary text-xs mt-0.5">Preferências do sistema</p></div>
+
+        <!-- General -->
+        <section class="fin-card flex flex-col gap-4">
+          <h2 class="text-gray-900 font-semibold text-sm border-b border-border pb-3">Geral</h2>
+          <div class="flex items-center justify-between py-2">
+            <div><p class="text-gray-900 text-sm font-medium">Moeda padrão</p><p class="text-secondary text-xs">Utilizada em todos os lançamentos</p></div>
+            <select class="month-select"><option>BRL — Real</option><option>USD — Dólar</option><option>EUR — Euro</option></select>
+          </div>
+          <div class="flex items-center justify-between py-2 border-t border-border">
+            <div><p class="text-gray-900 text-sm font-medium">Formato de data</p><p class="text-secondary text-xs">Como as datas aparecem no app</p></div>
+            <select class="month-select"><option>DD/MM/AAAA</option><option>MM/DD/AAAA</option><option>AAAA-MM-DD</option></select>
+          </div>
+          <div class="flex items-center justify-between py-2 border-t border-border">
+            <div><p class="text-gray-900 text-sm font-medium">Início do mês</p><p class="text-secondary text-xs">Dia de corte para os relatórios</p></div>
+            <select class="month-select"><option>Dia 1</option><option>Dia 5</option><option>Dia 10</option><option>Dia 15</option></select>
+          </div>
+        </section>
+
+        <!-- Notifications -->
+        <section class="fin-card flex flex-col gap-4">
+          <h2 class="text-gray-900 font-semibold text-sm border-b border-border pb-3">Notificações</h2>
+          <div class="flex items-center justify-between py-2">
+            <div><p class="text-gray-900 text-sm font-medium">Resumo semanal</p><p class="text-secondary text-xs">Receba um resumo toda segunda-feira</p></div>
+            <div class="w-11 h-6 rounded-full cursor-pointer relative" style="background:#3D6B5A">
+              <div class="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5 shadow-sm"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-t border-border">
+            <div><p class="text-gray-900 text-sm font-medium">Alerta de limite</p><p class="text-secondary text-xs">Aviso ao ultrapassar orçamento</p></div>
+            <div class="w-11 h-6 rounded-full cursor-pointer relative" style="background:#3D6B5A">
+              <div class="w-5 h-5 bg-white rounded-full absolute top-0.5 right-0.5 shadow-sm"></div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-t border-border">
+            <div><p class="text-gray-900 text-sm font-medium">Lembretes de lançamento</p><p class="text-secondary text-xs">Lembrar de registrar gastos recorrentes</p></div>
+            <div class="w-11 h-6 rounded-full bg-border cursor-pointer relative">
+              <div class="w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 shadow-sm"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="fin-card flex flex-col gap-4">
+          <div class="flex items-center justify-between border-b border-border pb-3">
+            <h2 class="text-gray-900 font-semibold text-sm">Categorias</h2>
+            <a href="#" class="text-sage text-xs font-semibold hover:underline">+ Nova categoria</a>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#3D6B5A"></span>Alimentação</div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#5A9278"></span>Transporte</div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#C9A84C"></span>Lazer</div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#B03A2E"></span>Moradia</div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#6B7280"></span>Saúde</div>
+            <div class="flex items-center gap-2 px-3 py-2 rounded-xl bg-bg border border-border text-xs text-gray-700"><span class="w-2 h-2 rounded-full flex-shrink-0" style="background:#0D1117"></span>Outros</div>
+          </div>
+        </section>
+
+        <a href="index.html" class="flex items-center justify-center gap-2 bg-sage text-white text-sm font-semibold px-6 py-3 rounded-xl hover:bg-sage-light transition-colors">
+          Salvar preferências
+        </a>
+
+      </div>
+    </main>
+  </div>
+
+  <nav class="bottom-nav">
+    <a href="index.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="2" width="7" height="7" rx="1.5"/><rect x="11" y="2" width="7" height="7" rx="1.5"/><rect x="2" y="11" width="7" height="7" rx="1.5"/><rect x="11" y="11" width="7" height="7" rx="1.5"/></svg>Painel</a>
+    <a href="receitas.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 9l5-5 5 5" stroke-linecap="round" stroke-linejoin="round"/></svg>Receitas</a>
+    <a href="novo-registro.html" class="bottom-nav-plus"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="white" stroke-width="2.4"><path d="M11 4v14M4 11h14" stroke-linecap="round"/></svg></a>
+    <a href="gastos.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 4v12M5 11l5 5 5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>Gastos</a>
+    <a href="perfil.html" class="bottom-nav-btn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="7" r="3.5"/><path d="M3 18c0-3.5 3.1-6 7-6s7 2.5 7 6" stroke-linecap="round"/></svg>Perfil</a>
+  </nav>
+</body>
+</html>
